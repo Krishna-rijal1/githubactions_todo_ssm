@@ -1,0 +1,6 @@
+---
+  - name: Ensure php is Started
+    systemd:
+      name: php7.4-fpm
+      state: started
+      enabled: yes

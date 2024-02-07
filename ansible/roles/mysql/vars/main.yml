@@ -1,0 +1,4 @@
+---
+db_user: krishna
+db_pass: krishna123
+db_name: ansible_db

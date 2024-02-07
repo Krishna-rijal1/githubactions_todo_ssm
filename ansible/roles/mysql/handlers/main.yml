@@ -1,0 +1,8 @@
+---
+  - name: Ensure mysql is Started
+    systemd:
+      name: mysql   
+      state: started
+      enabled: yes
+      
+      

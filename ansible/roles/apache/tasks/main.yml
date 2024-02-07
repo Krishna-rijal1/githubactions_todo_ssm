@@ -1,0 +1,13 @@
+---
+  - name: install apache2
+    apt:    
+      name: apache2
+      state: latest 
+      update_cache: yes
+    notify: Ensure apache2 is Started 
+
+  - name: Copy and template index.html
+    template:
+      src: templates/index.php.j2
+      dest: /var/www/html/index.html
+ 

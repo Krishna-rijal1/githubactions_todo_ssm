@@ -1,0 +1,11 @@
+---
+  - name: Install PHP and common modules
+    apt:
+      name:
+        - php
+        - php-cli
+        - php-fpm
+        - php-mbstring
+        - php-mysql
+        - php-xml
+      state: present
