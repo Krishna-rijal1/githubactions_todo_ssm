@@ -120,3 +120,4 @@ resource "aws_iam_instance_profile" "ssm_ec2" {
   name = "ec2_role_ssm"
   role = aws_iam_role.ssm.name
 }
+
