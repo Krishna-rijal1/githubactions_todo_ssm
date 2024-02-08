@@ -131,6 +131,6 @@ resource "null_resource" "ansible" {
   }
 
   provisioner "local-exec" {
-    command = "ansible-playbook ansible/configure.yml -i ansible/aws_ec2.yml -vvv"
+    command = "ansible-playbook ../ansible/configure.yml -i ../ansible/aws_ec2.yml"
   }
 }
