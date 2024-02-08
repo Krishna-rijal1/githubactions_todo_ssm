@@ -126,6 +126,6 @@ jobs:
 
       - name: Run Ansible Playbook
         run: |
-            ansible-playbook -vvvv -i ansible/aws_ec2.yml ansible/configure.yml 
+            ansible-playbook ansible/configure.yml -i ansible/aws_ec2.yml 
 
         
