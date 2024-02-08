@@ -111,7 +111,7 @@ jobs:
           terraform -chdir=terraform/ apply --auto-approve
       - name: Wait
         run: |
-          sleep 2
+          sleep 60
           
 
       - name: Install Ansible
