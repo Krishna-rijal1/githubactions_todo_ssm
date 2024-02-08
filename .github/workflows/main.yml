@@ -109,23 +109,23 @@ jobs:
       - name: Terraform apply
         run: |
           terraform -chdir=terraform/ apply --auto-approve
-      - name: Wait
-        run: |
-          sleep 60
+      # - name: Wait
+      #   run: |
+      #     sleep 60
           
 
-      - name: Install Ansible
-        run: |
-            sudo apt update
-            sudo apt install -y ansible
+      # - name: Install Ansible
+      #   run: |
+      #       sudo apt update
+      #       sudo apt install -y ansible
   
       
-      - name: Ansible Inventory
-        run: |
-          ansible-inventory -i ansible/aws_ec2.yml --graph
+      # - name: Ansible Inventory
+      #   run: |
+      #     ansible-inventory -i ansible/aws_ec2.yml --graph
 
-      - name: Run Ansible Playbook
-        run: |
-            ansible-playbook ansible/configure.yml -i ansible/aws_ec2.yml 
+      # - name: Run Ansible Playbook
+      #   run: |
+      #       ansible-playbook ansible/configure.yml -i ansible/aws_ec2.yml 
 
         

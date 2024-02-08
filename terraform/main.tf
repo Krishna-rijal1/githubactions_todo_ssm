@@ -121,3 +121,16 @@ resource "aws_iam_instance_profile" "ssm_ec2" {
   role = aws_iam_role.ssm.name
 }
 
+
+resource "null_resource" "ansible" {
+
+  depends_on = [aws_instance.ansible_conf]
+  # Changes to any instance of the cluster requires re-provisioning
+  triggers = {
+    always_run = "${timestamp()}"
+  }
+
+  provisioner "local-exec" {
+    command = "ansible-playbook ansible/configure.yaml -i ansible/aws_ec2.yaml -vvv"
+  }
+}
