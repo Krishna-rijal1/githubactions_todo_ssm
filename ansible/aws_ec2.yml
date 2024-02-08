@@ -2,7 +2,7 @@ plugin: amazon.aws.aws_ec2
 regions:
    - us-east-1
 hostnames:
-  - ip-address
+  - instance-id
 groups:
   Development: "'115_ansible_server' in tags.Name"
 ansible_python_interpreter: /opt/pipx/venvs/ansible-core/bin/python
